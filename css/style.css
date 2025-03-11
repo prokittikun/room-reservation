@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "SF Thonburi";
+    src: url("../assets/fonts/SFThonburi-Regular.ttf");
+}
+
+@font-face {
+    font-family: "BaiCha";
+    src: url("../assets/fonts/BaiChaThin.otf");
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url("../assets/fonts/Kanit-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Prompt";
+    src: url("../assets/fonts/Prompt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Seafood";
+    src: url("../assets/fonts/SeafoodThin.otf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Pattaya";
+    src: url("../assets/fonts/Pattaya-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Anuphan";
+    src: url("../assets/fonts/Anuphan-Regular.ttf");
+}
+
+@font-face {
+    font-family: "IBM Plex Sans Thai";
+    src: url("../assets/fonts/IBMPlexSansThai-Regular.ttf");
+}
+
+@font-face {
+    font-family: "K2D";
+    src: url("../assets/fonts/K2D-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Mitr";
+    src: url("../assets/fonts/Mitr-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Sarabun";
+    src: url("../assets/fonts/Sarabun-Regular.ttf");
+}
+
+@font-face {
+    font-family: CS PraJad;
+    src: url("../assets/fonts/CSPraJad-bold.otf");
+}
+
+@font-face {
+    font-family: Noto Sans Thai;
+    src: url("../assets/fonts/NotoSansThai-Regular.ttf");
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bg-lightblue: #3c8dbc;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Poppins, Sarabun;
+    font-size: 14px;
+}
+
+table-responsive {
+    overflow-x: scroll;
+}
+
+.bg-lightblue {
+    background-color: var(--bg-lightblue);
+}
+
+.btn.bg-lightblue {
+    background-color: var(--bg-lightblue);
+    color: white !important;
+}
+
+.bg-gradient-lightblue {
+    background: var(--bs-gradient);
+    background-color: var(--bg-lightblue);
+    color: white !important;
+}
+
+/* button .bg-lightblue {
+    background-color: var(--bg-lightblue);
+} */
+.btn.bg-lightblue:hover {
+    background-color: var(--bg-lightblue);
+    filter: brightness(90%);
+}
+
+#logout {
+    outline: none;
+    border: 0px;
+}
+
+#logout:hover {
+    filter: brightness(90%);
+}
+
+.container-fluid {
+    max-width: 2560px !important;
+}
+
+.err-validate {
+    color: var(--bs-danger);
+    margin: 6px 0px;
+    display: none;
+    padding: 2px 7px;
+    border-radius: 4px;
+}

@@ -1,0 +1,488 @@
+@font-face {
+  font-family: "SF Thonburi";
+  src: url("../../assets/fonts/SFThonburi-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BaiCha";
+  src: url("../../assets/fonts/BaiChaThin.otf");
+}
+
+@font-face {
+  font-family: "Kanit";
+  src: url("../../assets/fonts/Kanit-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../../assets/fonts/Prompt-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Seafood";
+  src: url("../../assets/fonts/SeafoodThin.otf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Pattaya";
+  src: url("../../assets/fonts/Pattaya-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("../../assets/fonts/Anuphan-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Thai";
+  src: url("../../assets/fonts/IBMPlexSansThai-Regular.ttf");
+}
+
+@font-face {
+  font-family: "K2D";
+  src: url("../../assets/fonts/K2D-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Mitr";
+  src: url("../../assets/fonts/Mitr-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Sarabun";
+  src: url("../../assets/fonts/Sarabun-Regular.ttf");
+}
+
+@font-face {
+  font-family: CS PraJad;
+  src: url("../../assets/fonts/CSPraJad-bold.otf");
+}
+
+@font-face {
+  font-family: Noto Sans Thai;
+  src: url("../../assets/fonts/NotoSansThai-Regular.ttf");
+}
+
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bg-lightblue: #3c8dbc;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins, Sarabun;
+  font-size: 14px;
+}
+
+.container-fluid {
+  max-width: 2560px !important;
+}
+
+.err-validate {
+  color: var(--bs-danger);
+  margin: 6px 0px;
+  display: none;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.bg-lightgrey {
+  background-color: #e9ecef;
+}
+
+.img-preview img {
+  width: 100%;
+  object-fit: contain;
+}
+
+#receiptTable {
+  border: 0px !important;
+}
+
+.page-item:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.page-item .page-link {
+  color: var(--bs-dark) !important;
+}
+
+
+
+.page-item.active .page-link {
+  border-color: var(--bg-lightblue) !important;
+  background-color: var(--bs-gradient);
+  background-color: var(--bg-lightblue) !important;
+  color: var(--bs-light) !important;
+}
+
+.nav-item.menu-open>.nav-link {
+  background-color: var(--bs-gradient);
+  background-color: var(--bg-lightblue) !important;
+  color: white !important;
+  font-weight: bolder;
+}
+
+.table-responsive {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 60vh;
+}
+
+.table td,
+.table th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+thead th div,
+thead td div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 4px;
+  margin: 0;
+}
+
+thead th i,
+thead td i {
+  opacity: 0.3;
+}
+
+td,
+th {
+  vertical-align: middle !important;
+}
+
+.tr-bg-info {
+  background-color: #d4f3f9;
+}
+
+.tr-bg-teal {
+  background-color: #cef4e9;
+}
+
+#first-page.disabled .page-link,
+#last-page.disabled .page-link {
+  color: var(--bs-light) !important;
+  background-color: var(--bs-dark);
+}
+
+.no-btn {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 2px;
+}
+
+button.nav-link {
+  border: 0px;
+}
+
+.nav-item .nav-link {
+  background-color: transparent;
+}
+
+.sidebar {
+  font-family: Mitr !important;
+}
+
+.nav-item .nav-link.active {
+  /* color: var(--bs-light) !important; */
+  font-weight: bold;
+  background: var(--bs-gradient);
+  box-shadow: none !important;
+  /* background-color: var(--bg-lightblue) !important; */
+}
+
+/* 
+.nav-item .nav-link:hover {
+  color: var(--bs-orange) !important;
+}
+
+.nav-item .nav-link.active:hover {
+  color: var(--bs-light) !important;
+} */
+.select2 {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.select2-container {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.selection {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.select2-selection {
+  padding: 4px !important;
+  margin: 0px !important;
+}
+
+.select2-selection__redered {
+  margin: 0 !important;
+}
+
+
+.preview-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+
+}
+
+.book-preview {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#book-preview-new {
+  display: none;
+}
+
+
+#preview-newimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-weight: normal !important;
+}
+
+.label-file:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.preview-img {
+  height: 100%;
+  width: 100%;
+}
+
+
+.table-img {
+  width: auto;
+  height: 3rem;
+  object-fit: contain;
+}
+
+#meetingRoomImgPreview {
+  height: 12rem;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.room-img-preview {
+  width: 100%;
+  height: 6rem;
+  object-fit: contain;
+}
+
+/* tbody tr,
+tbody td,
+tbody th {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  vertical-align: middle !important;
+} */
+/* .form-control:focus {
+  border-width: 2px;
+}
+.form-control:focus {
+  border-color: #0066ff;
+} */
+
+/* tbody tr:hover {
+  background-color: #17a2b8 !important;
+  color: white !important;
+  cursor: pointer;
+} */
+
+.profile-img {
+  width: 100%;
+  height: 12rem;
+  object-fit: contain;
+}
+
+#memberImgView {
+  background-image: url("/static/assets/icons/png.png");
+  width: 100%;
+  border: 1px solid #eeeeee;
+  height: 12rem;
+  margin: 7px;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cr-date {
+  padding: 0 !important;
+}
+
+thead td,
+thead th {
+  border: 0 !important;
+}
+
+
+/* #e9ecef */
+.title-header {
+  background: var(--bs-gradient);
+  background-color: #e9ecef;
+  /* border: 1px solid #47c7a1; */
+  /* color: var(--bs-gray); */
+  font-weight: bold;
+  border: 1px solid var(--bs-light);
+}
+
+[name="slippayment-btn"] {
+  display: none;
+}
+
+.font-mitr {
+  font-family: Mitr;
+}
+
+/* thead td,
+thead th {
+  font-family: Mitr;
+} */
+
+.border-teal {
+  background: none;
+  color: var(--bs-teal);
+  border: 1px solid var(--bs-teal) !important;
+}
+
+.example-image-detail {
+  z-index: 100;
+}
+
+.slip-payment {
+  height: 8rem;
+  object-fit: contain;
+}
+
+.btn-teal {
+  background-color: #20c997;
+  color: var(--bs-light) !important;
+
+}
+
+.btn-teal:hover {
+  filter: brightness(90%);
+  background-color: #20c997;
+}
+
+.bg-none {
+  background: none;
+}
+
+.signin-form {
+  box-shadow: none !important;
+}
+
+.signin-form:focus {
+  border: 1px solid var(--bs-gray) !important;
+}
+
+.btn-none-shadow {
+  box-shadow: none !important;
+}
+
+.text-teal {
+  color: #20c997;
+}
+
+#slippaymentShow {
+  height: 24rem;
+  object-fit: contain;
+}
+
+.slip-payment:hover {
+  cursor: pointer;
+}
+
+.reservatCal-btn {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2rem !important;
+  background: none;
+  border: 0;
+  align-items: center;
+}
+
+.tooltip-alert {
+  display: none;
+  position: absolute;
+  top: -100%;
+  right: 0%;
+  background-color: #343a40;
+  color: white;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.meeting-id-items {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[name=calendar-target-btn] {
+  display: none;
+  height: 100%;
+  border: 0px !important;
+}
+
+
+
+#calendarBody td {
+  padding: 2rem !important;
+}

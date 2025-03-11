@@ -1,0 +1,40 @@
+table {
+    font-size: 12px;
+}
+thead th {
+    border: 1px solid black !important;
+}
+thead tr {
+    border: 1px solid black !important;
+}
+td,
+th {
+    vertical-align: middle;
+    padding: 4px 7px;
+    border: 1px solid black !important;
+}
+
+.text-time {
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.text-total {
+    font-weight: bold;
+}
+
+.text-total-format {
+    font-weight: bold;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-red {
+    color: #E53935;
+}
+
+.text-titlename {
+    font-weight: bold;
+}
