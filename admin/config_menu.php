@@ -73,7 +73,7 @@ $menu = [
         'template' => 'emp_form',
     ],
     'user_form' => [
-        'title' => 'ฟอร์มบันทึกข้อมูลผู้ใช้งาน และ พนักงาน',
+        'title' => 'ฟอร์มบันทึกข้อมูลสมาชิก',
         'template' => 'user_form',
     ],
     'logo' => [
