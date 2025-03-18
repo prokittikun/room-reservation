@@ -38,12 +38,12 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page,]);
   <div class="col-auto">
     <?php echo entries_row_query($per_page, $route_params) ?>
   </div>
-  <div class="col-auto">
+  <!-- <div class="col-auto">
     <a class="btn btn-sm bg-gradient-lightblue" href="./?r=user_form">
       <i class="fa-solid fa-plus"></i>
       <span>เพิ่มผู้ใช้งาน</span>
     </a>
-  </div>
+  </div> -->
 </div>
 <div class="card">
   <div class="card-body">

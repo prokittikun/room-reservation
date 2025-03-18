@@ -15,12 +15,12 @@ if (!empty($id)) {
 }
 ?>
 
-  <div class="p-2">
+<!-- <div class="p-2">
     <a class="btn btn-sm bg-gradient-lightblue" href="?r=member_data">
       <i class="fa-solid fa-plus"></i>
       <span>สมาชิก</span>
     </a>
-  </div>
+  </div> -->
 
 
 <div class="row">
@@ -30,7 +30,7 @@ if (!empty($id)) {
         <h5 class="m-0 card-title">รายละเอียดพนักงานและผู้ดูแล</h5>
       </div>
       <div class="card-body">
-        <div class="form-group row">
+        <!-- <div class="form-group row">
           <label class="col-md-2 col-form-label text-md-right text-left">บทบาท</label>
           <div class="col-md-10">
             <select class="custom-select" id="role" data-role="<?php echo $row['role'] ?? '' ?>">
@@ -40,7 +40,7 @@ if (!empty($id)) {
             </select>
             <p class="validate-text" id="roleValidate"></p>
           </div>
-        </div>
+        </div> -->
         <div class="form-group row">
           <label class="col-md-2 col-form-label text-md-right text-left">ชื่อ</label>
           <div class="col-md-10">
@@ -53,6 +53,13 @@ if (!empty($id)) {
           <div class="col-md-10">
             <input type="text" value="<?php echo $row['lname'] ?? '' ?>" class="form-control" id="lname" placeholder="ป้อนนามสกุล" />
             <p class="validate-text" id="lnameValidate"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label text-md-right text-left">เบอร์ติดต่อ</label>
+          <div class="col-md-10">
+            <input type="text" max="14" value="<?php echo $row['tel'] ?? '' ?>" class="form-control" id="tel" placeholder="ป้อนเบอร์ติดต่อ" />
+            <p class="validate-text" id="telValidate"></p>
           </div>
         </div>
 

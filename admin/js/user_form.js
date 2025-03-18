@@ -17,12 +17,12 @@ function userHandleSubmit() {
 }
 userHandleSubmit().click(function () {
     const userForm = [
-        {
-            formtype: "text",
-            input: $("#role"),
-            validate: $("#roleValidate"),
-            msg: "กรุณาเลือกบาทบาทหรือขอบเขตผู้ใช้งาน",
-        },
+        // {
+        //     formtype: "text",
+        //     input: $("#role"),
+        //     validate: $("#roleValidate"),
+        //     msg: "กรุณาเลือกบาทบาทหรือขอบเขตผู้ใช้งาน",
+        // },
         {
             formtype: "text",
             input: $("#fname"),
@@ -34,6 +34,12 @@ userHandleSubmit().click(function () {
             input: $("#lname"),
             validate: $("#lnameValidate"),
             msg: "กรุณาป้อนนามสกุล",
+        },
+        {
+            formtype: "text",
+            input: $("#tel"),
+            validate: $("#telValidate"),
+            msg: "กรุณาป้อนเบอร์โทรศัพท์",
         },
         {
             formtype: "text",
@@ -58,13 +64,14 @@ userHandleSubmit().click(function () {
         const {
             input,
             validate,
-            formtype
+            formtype,
         } = fd;
 
         let msg = fd.msg
         let is_validate = false
         if (formtype == "text") {
-
+            console.log(msg, input.val());
+            
             const value = input.val().trim();
             if (value == "") {
 
@@ -120,7 +127,7 @@ userHandleSubmit().click(function () {
             'route': '/member/update',
             'fname': $('#fname').val().trim(),
             'lname': $('#lname').val().trim(),
-            'role': $('#role').val(),
+            // 'role': $('#role').val(),
             'tel': $('#tel').val()
         }
         if (is_password && method == 'put') {
