@@ -25,22 +25,6 @@ $row = getDataById($sql, []);
                         <span>/</span>
                         <span><?php echo $row['village_no'] ?></span>
                     <?php } ?>
-
-                    <?php if (!empty($row['village_name'])) { ?>
-                        <span><?php echo $row['village_name'] ?></span>
-                    <?php } ?>
-                    <?php if (!empty($row['alley'])) { ?>
-                        <span>ซอย</span>
-                        <span><?php echo $row['alley'] ?></span>
-                    <?php } ?>
-                    <?php if (!empty($row['junction'])) { ?>
-                        <span>แยก</span>
-                        <span><?php echo $row['junction'] ?></span>
-                    <?php } ?>
-                    <?php if (!empty($row['road'])) { ?>
-                        <span>ถนน</span>
-                        <span><?php echo $row['road'] ?></span>
-                    <?php } ?>
                     <?php if (!empty($row['sub_district'] ?? '')) { ?>
                         <span>ตำบล</span>
                         <span><?php echo $row['sub_district'] ?></span>

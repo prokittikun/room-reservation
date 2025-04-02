@@ -81,7 +81,7 @@ $route_params = get_params_isNotEmpty(['r' => $r]);
                         <td>
                             <button name="reserv-checkin" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-gradient-maroon">
                                 <i class="fa-solid fa-angles-right"></i>
-                                <strong>เข้าพัก</strong>
+                                <strong>checkin</strong>
                             </button>
 
                             <button name="refund-pay" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-gradient-lightblue">

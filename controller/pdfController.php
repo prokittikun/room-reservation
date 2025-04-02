@@ -67,7 +67,7 @@ function get_data_entries($data)
 
     $_datatable = [
         $idx,
-        $d['reservation_id'],
+        // $d['reservation_id'],
         get_reservation_paystatus($d['pay_status']),
         get_reservation_status($d['status']),
         number_format($d['total'], 2),
@@ -114,7 +114,7 @@ try {
         $table .= '<thead>';
         $table .= '<tr>';
         $table .= '<th class="text-center" style="width: 3%;" scope="col">ลำดับ</th>';
-        $table .= '<th style="width:8%;" scope="col">รหัส</th>';
+        // $table .= '<th style="width:8%;" scope="col">รหัส</th>';
         $table .= '<th style="width:10%;" scope="col">การจ่ายเงิน</th>';
         $table .= '<th style="width:10%;" scope="col">สถานะ</th>';
         $table .= '<th style="width: 8%;" scope="col">ยอด</th>';
@@ -154,7 +154,7 @@ try {
         $header = "รายงานการจองห้องพัก";
         $footer = 'รายงาน' . date('วันที่ d-m-Y', strtotime($start_dt));
         $footer .= date(' ถึง วันที่ d-m-Y ', strtotime($end_dt));
-        $footer .= date('สร้างเมื่อ Y-m-d เวลา H:i:s');
+        $footer .= date('สร้างเมื่อ Y-m-d');
         $mpdf = new \Mpdf\Mpdf(
             [
                 'default_font' => 'sf-thonburi',

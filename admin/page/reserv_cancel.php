@@ -44,7 +44,7 @@ $route_params = get_params_isNotEmpty(['r' => $r]);
                         <th class="text-center" style="width: 5%;" scope="col">ลำดับ</th>
                         <th class="text-center" style="width: 7%;" scope="col">หลักฐาน</th>
                         <th style="width:10%;" scope="col">สถานะการเงิน</th>
-                        <th style="width:7%;" scope="col">รหัสการจอง</th>
+                        <!-- <th style="width:7%;" scope="col">รหัสการจอง</th> -->
                         <th style="width:14%;" scope="col"></th>
                         <th style="width:18%;" scope="col">ห้อง</th>
                         <th style="width: 25%;" scope="col">ชื่อ - นามสกุล</th>
@@ -76,7 +76,7 @@ $route_params = get_params_isNotEmpty(['r' => $r]);
                                 </span>
                             </td>
 
-                            <td class="text-center"><?php echo $r['reservation_id'] ?></td>
+                            <!-- <td class="text-center"><?php echo $r['reservation_id'] ?></td> -->
                             <td>
                                 <button name="reserv-confirm" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm btn-success">
                                     <i class="fa-solid fa-check"></i>

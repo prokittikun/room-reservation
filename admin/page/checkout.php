@@ -78,7 +78,7 @@ $route_params = get_params_isNotEmpty(['r' => $r,'start_dt'=>$start_dt]);
                         <td>
                             <button name="reserv-checkout" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-lightblue">
                                 <i class="fa-solid fa-angles-left"></i>
-                                <strong>ออกห้อง</strong>
+                                <strong>checkout</strong>
                             </button>
 
                         </td>

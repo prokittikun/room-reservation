@@ -143,14 +143,14 @@ $route_params = get_params_isNotEmpty([]);
 
                                         $_three_days_before = strtotime('-3 days', $_start_dt);
                                         //$r['status'] == 'progress' && 
-                                        if ($r['status'] != 'cancel' && $_start_dt > $_dt && $_dt < $_three_days_before) { ?>
+                                        if ($r['status'] != 'checkin' && $r['status'] != 'checkout' && $r['status'] != 'cancel' && $_start_dt > $_dt && $_dt < $_three_days_before) { ?>
                                             <button name="reserv-postpone" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-lightblue">
                                                 <i class="fa-solid fa-retweet"></i>
                                                 <strong>เลื่อน</strong>
                                             </button>
                                         <?php   } ?>
 
-                                        <?php if (($r['status'] != 'confirm' || $r['status'] == 'progress') && $r['is_cancel'] != 'true') { ?>
+                                        <?php if ((($r['status'] != 'confirm' && $r['status'] != 'checkin' && $r['status'] != 'checkout') || $r['status'] == 'progress') && $r['is_cancel'] != 'true') { ?>
                                             <button name="reserv-cancel" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 btn-danger">
                                                 <i class="fa-solid fa-xmark"></i>
                                                 <strong>ยกเลิก</strong>
