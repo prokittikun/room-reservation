@@ -123,7 +123,7 @@ try {
     <?php require_once('./nav.php') ?>
 
     <div class="container min-vh-100 my-3">
-        <div class="card">
+        <!-- <div class="card">
             <div class="card-body bg-light">
                 <h5 class="text-center">ค้นหาห้องพัก</h5>
                 <div class="row align-items-center justify-content-center">
@@ -163,7 +163,7 @@ try {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <?php foreach ($carousel_items as $index => $item): ?>
@@ -192,12 +192,13 @@ try {
             </a>
         </div>
         <div class="mt-5"></div>
-        <div class="d-flex flex-row gap-5 justify-content-center">
+        <div class="d-flex flex-row gap-4 justify-content-center flex-wrap">
             <?php foreach ($row_rt as $rt) { ?>
-                <a class="btn btn-primary btn-lg text-white" href="./rooms.php?roomType=<?= $rt['room_type_name']; ?>">
+                <a class="btn btn-outline-primary btn-lg text-black px-5 py-3 rounded-pill shadow-lg fw-bold transition"
+                    href="./rooms.php?roomType=<?= $rt['room_type_name']; ?>">
                     <?php echo $rt['room_type_name'] ?>
                 </a>
-            <?php    } ?>
+            <?php } ?>
         </div>
         <div class="row my-3">
             <?php foreach ($row as $r) { ?>
@@ -246,3 +247,18 @@ try {
 </body>
 
 </html>
+
+<style>
+    .btn-outline-primary {
+        border: 2px solid #007bff;
+        color: #007bff;
+        font-size: 1.25rem;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

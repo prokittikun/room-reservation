@@ -29,12 +29,14 @@ $("#roomHandleSave").click(function () {
     const method = $(this).attr('data-method')
     const id = $(this).attr('data-id')
     const route = method == 'post' ? '/room/insert' : '/room/update/id'
-    const meetingRoomForm = [{
-        input: [$("#roomName"), $('#roomNumber')],
-        validate: $("#validateRoomNameAndNumber"),
-        msg: "โปรดป้อนขื่อ หรือ หมายเลขห้องพัก",
-        formType: "name",
-    }, {
+    const meetingRoomForm = [
+    //     {
+    //     input: [$("#roomName"), $('#roomNumber')],
+    //     validate: $("#validateRoomNameAndNumber"),
+    //     msg: "โปรดป้อนขื่อ หรือ หมายเลขห้องพัก",
+    //     formType: "name",
+    // }, 
+    {
         input: $('#roomType'),
         validate: $("#validateRoomType"),
         msg: "โปรดเลือกประเภทห้องพัก",
@@ -69,10 +71,10 @@ $("#roomHandleSave").click(function () {
         if (formType == "text") {
             is_pass = input.val().trim() == ''
         }
-        if (formType == "name") {
-            const [name, no] = $.map(input, (o) => ($(o).val().trim()))
-            is_pass = name == '' && no == ''
-        }
+        // if (formType == "name") {
+        //     const [name, no] = $.map(input, (o) => ($(o).val().trim()))
+        //     is_pass = name == '' && no == ''
+        // }
         if (formType == "number") {
             const n = parseFloat(input.val().trim())
             if (isNaN(n)) {
@@ -94,7 +96,7 @@ $("#roomHandleSave").click(function () {
     if (validateCount == 0) {
         const formData = new FormData();
         formData.append("route", route)
-        formData.append("room_name", $("#roomName").val().trim());
+        formData.append("room_name", ""); //$("#roomName").val().trim()
         formData.append("room_number", $("#roomNumber").val().trim());
         formData.append("bed_amount", $("#bedAmount").val());
         formData.append("room_type", $("#roomType").val());

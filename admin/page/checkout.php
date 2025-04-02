@@ -46,7 +46,7 @@ $route_params = get_params_isNotEmpty(['r' => $r,'start_dt'=>$start_dt]);
             <thead>
                 <tr>
                     <th class="text-center" style="width: 3%;" scope="col">ลำดับ</th>
-                    <th style="width:7%;" scope="col">รหัส</th>
+                    <!-- <th style="width:7%;" scope="col">รหัส</th> -->
                     <th style="width:10%;" scope="col">การจ่ายเงิน</th>
                     <th style="width: 15%;" scope="col"></th>
                     <th style="width: 5%;" scope="col"></th>
@@ -69,7 +69,7 @@ $route_params = get_params_isNotEmpty(['r' => $r,'start_dt'=>$start_dt]);
                 ?>
                     <tr>
                         <td class="text-center"><?php echo $idx++ ?></td>
-                        <td><?php echo $r['reservation_id'] ?></td>
+                        <!-- <td><?php echo $r['reservation_id'] ?></td> -->
                         <td>
                             <span class=" <?php echo get_reservation_paystatus_text($r['pay_status']) ?>">
                                 <?php echo get_reservation_paystatus($r['pay_status']) ?>

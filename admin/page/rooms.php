@@ -48,7 +48,7 @@ $route_params = get_params_isNotEmpty(['r' => $r]);
   </div>
   <div class="col-md-4">
     <div class="d-flex my-1">
-      <input type="text" value="<?php echo str_ireplace('-', '', $name) ?>" class="form-control" id="findByName" placeholder="ชื่อห้องประชุม">
+      <input type="text" value="<?php echo str_ireplace('-', '', $name) ?>" class="form-control" id="findByName" placeholder="ชื่อห้อง">
       <button class="btn btn-light ml-1" id="findByNameBtn">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>

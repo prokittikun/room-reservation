@@ -43,7 +43,7 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page]);
           <tr>
             <th style="width: 5%;" scope="col">ลำดับ</th>
             <th style="width: 10%;" scope="col">รูปภาพ</th>
-            <th style="width: 40%;" scope="col">ชื่อห้องประชุม</th>
+            <th style="width: 40%;" scope="col">ชื่อห้อง</th>
             <th style="width: 15%;" scope="col">หมายเลขห้อง</th>
             <th class="text-center" style="width: 10%;" scope="col">ราคา</th>
             <th style="width: 20%;" scope="col"></th>

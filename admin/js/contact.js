@@ -10,10 +10,10 @@ $('#contactHandleSave').click(function () {
     'sub_district': $('#subDistrict').val().trim(),
     'house_no': $('#houseNo').val(),
     'village_no': $('#villageNo').val(),
-    'village_name': $('#villageName').val(),
-    'alley': $('#alley').val(),
-    'junction': $('#junction').val(),
-    'road': $('#road').val(),
+    'village_name': "",//$('#villageName').val()
+    'alley': "",//$('#alley').val(),
+    'junction': "",//$('#junction').val(),
+    'road': "",//$('#road').val(),
     'route': '/contact/save'
   }
   if (id != '') {

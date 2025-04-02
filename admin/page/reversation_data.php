@@ -65,7 +65,7 @@ $route_params = get_params_isNotEmpty(['r' => $r]);
             <thead>
                 <tr>
                     <th class="text-center" style="width: 3%;" scope="col">ลำดับ</th>
-                    <th style="width:8%;" scope="col">รหัส</th>
+                    <!-- <th style="width:8%;" scope="col">รหัส</th> -->
                     <th style="width: 13%;" scope="col"></th>
                     <th style="width:10%;" scope="col">การจ่ายเงิน</th>
                     <th style="width:10%;" scope="col">สถานะ</th>
@@ -88,7 +88,7 @@ $route_params = get_params_isNotEmpty(['r' => $r]);
                     <tr>
                         <td class="text-center"><?php echo $idx++ ?></td>
 
-                        <td><?php echo $r['reservation_id'] ?></td>
+                        <!-- <td><?php echo $r['reservation_id'] ?></td> -->
                         <td>
                             <a href="./?r=reserv_f&id=<?php echo $r['reservation_id'] ?>" name="reserv-edit" class="btn btn-sm bg-gradient-secondary">
                                 <i class="fa-solid fa-pen"></i>

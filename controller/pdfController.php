@@ -30,11 +30,11 @@ $params = ['true', $_start, $_end, $_start, $_end];
 
 
 if (!empty($status)) {
-    $sql .= " AND reservations.status ";
+    $sql .= " AND reservations.status = ?";
     array_push($params, $status);
 }
 if (!empty($pay_status)) {
-    $sql .= " AND reservations.pay_status ";
+    $sql .= " AND reservations.pay_status = ?";
     array_push($params, $pay_status);
 }
 

@@ -71,10 +71,10 @@ if (!empty($id)) {
           <div class="col-md-10">
             <input type="password" class="form-control" id="password" placeholder="ป้อนภาษาอังกฤษกับตัวเลขเท่านั้น" />
             <p class="validate-text" id="passwordValidate"></p>
-            <div class="custom-control custom-checkbox">
+            <!-- <div class="custom-control custom-checkbox">
               <input class="custom-control-input" onclick="obscureText('#password')" type="checkbox" id="showPassword">
               <label for="showPassword" class="custom-control-label">แสดงรหัสผ่าน</label>
-            </div>
+            </div> -->
             <div class="custom-control custom-checkbox">
               <input class="custom-control-input" type="checkbox" id="changePassword">
               <label for="changePassword" class="custom-control-label">เปลี่ยนรหัสผ่าน</label>

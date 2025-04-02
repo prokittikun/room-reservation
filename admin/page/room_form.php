@@ -10,23 +10,37 @@ if (!empty($id)) {
     $example_image = explode(',', $row['img']);
 }
 ?>
+<?php
+$room_type_sql = "SELECT * FROM room_type WHERE soft_delete !=?";
+$room_type_option = getDataOption($room_type_sql, ['true']);
+?>
 
-<div class="form-group">
+<!-- <div class="form-group">
     <label>ชื่อห้อง</label>
     <input type="text" class="form-control" value="<?php echo $row['room_name'] ?? '' ?>" id="roomName" maxlength="300">
+</div> -->
+<div class="form-group">
+    <label>ประเภทห้อง</label>
+    <select class="custom-select font-weight-bold" id="roomType" data-type="<?php echo $row['room_type'] ?? '' ?>">
+        <option value="">เลือก</option>
+        <?php foreach ($room_type_option as $rt_opt) { ?>
+            <option value="<?php echo $rt_opt['room_type_id'] ?>">
+                <?php echo $rt_opt['room_type_name'] ?>
+            </option>
+
+        <?php  } ?> ?>
+        <?php ?>
+    </select>
+    <p class="err-validate" id="validateRoomType"></p>
 </div>
 <div class="form-group">
     <label>หมายเลขห้อง</label>
     <input type="text" class="form-control" id="roomNumber" value="<?php echo $row['room_number'] ?? '' ?>" maxlength="50">
 </div>
 <p class="err-validate" id="validateRoomNameAndNumber"></p>
-<?php
-$room_type_sql = "SELECT * FROM room_type WHERE soft_delete !=?";
-$room_type_option = getDataOption($room_type_sql, ['true']);
-?>
 
 <div class="row">
-    <div class="col-auto">
+    <!-- <div class="col-auto">
         <label>ประเภทห้อง</label>
         <select class="custom-select font-weight-bold" id="roomType" data-type="<?php echo $row['room_type'] ?? '' ?>">
             <option value="">เลือก</option>
@@ -39,7 +53,7 @@ $room_type_option = getDataOption($room_type_sql, ['true']);
             <?php ?>
         </select>
         <p class="err-validate" id="validateRoomType"></p>
-    </div>
+    </div> -->
     <div class="col-auto">
         <div class="form-group">
             <label>จำนวนเตียง</label>
@@ -105,7 +119,7 @@ $room_type_option = getDataOption($room_type_sql, ['true']);
 </div>
 <div class="form-group">
     <label>รายละเอียด</label>
-    <textarea class="form-control" id="detail" rows="3" placeholder="ป้อนรายละเอียดของห้องพัก"><?php echo $row['detail']??'' ?></textarea>
+    <textarea class="form-control" id="detail" rows="3" placeholder="ป้อนรายละเอียดของห้องพัก"><?php echo $row['detail'] ?? '' ?></textarea>
 </div>
 
 

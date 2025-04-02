@@ -41,11 +41,11 @@ $menu = [
         'template' => 'reserv_confirm',
     ],
     'checkin' => [
-        'title' => 'เข้าห้องพัก',
+        'title' => 'checkin',
         'template' => 'checkin',
     ],
     'checkout' => [
-        'title' => 'ออกห้องพัก',
+        'title' => 'checkout',
         'template' => 'checkout',
     ],
     'reserv_d' => [

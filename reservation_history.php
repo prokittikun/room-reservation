@@ -74,17 +74,17 @@ $route_params = get_params_isNotEmpty([]);
                         <thead>
                             <tr class="">
                                 <th class="text-center" style="width: 5%;" scope="col">ลำดับ</th>
-                                <th class="text-center" style="width:8%;" scope="col">รหัส</th>
-                                <th style="width:8%;" scope="col">สถานะ</th>
-                                <th style="width:7%;" scope="col">การชำระเงิน</th>
-                                <th style="width: 15%;" scope="col"></th>
-                                <th class="text-center" style="width:4%;" scope="col"></th>
-                                <th style="width:15%;" scope="col">ห้อง</th>
-                                <th style="width:9%;" scope="col">ยอด</th>
-
-                                <th style="width: 12%;" scope="col">วันที่ทำรายการ</th>
+                                <!-- <th class="text-center" style="width:8%;" scope="col">รหัส</th> -->
                                 <th style="width: 12%;" scope="col">วันที่จอง</th>
                                 <th class="text-center" style="width: 6%;" scope="col">จำนวน</th>
+                                <th style="width:9%;" scope="col">ยอด</th>
+                                <th style="width:7%;" scope="col">การชำระเงิน</th>
+                                <th class="text-center" style="width:4%;" scope="col"></th>
+                                <th style="width:15%;" scope="col">ห้อง</th>
+                                <th style="width:8%;" scope="col">สถานะ</th>
+                                <th style="width: 15%;" scope="col"></th>
+
+                                <!-- <th style="width: 12%;" scope="col">วันที่ทำรายการ</th> -->
 
                             </tr>
                         </thead>
@@ -97,17 +97,39 @@ $route_params = get_params_isNotEmpty([]);
                             ?>
                                 <tr>
                                     <td class="text-center"><?php echo $idx++ ?></td>
-                                    <td><?php echo $r['reservation_id'] ?></td>
+                                    <!-- <td><?php echo $r['reservation_id'] ?></td> -->
                                     <td>
-                                        <span class="<?php echo get_reservation_status_text($r['status']) ?>">
-                                            <?php echo get_reservation_status($r['status']) ?>
-                                        </span>
+                                        <p class="m-0">
+                                            <span class="text-muted">วันที่</span>
+                                            <strong class="text-success">
+                                                <?php echo getShortThaiDate($r['start_dt']) ?>
+                                            </strong>
+                                        </p>
+                                        <p class="m-0">
+                                            <span class="text-muted">ถึง</span>
+                                            <strong class="text-danger">
+                                                <?php echo getShortThaiDate($r['end_dt']) ?>
+                                            </strong>
+                                        </p>
                                     </td>
+                                    <td class="text-center"><?php echo $r['day_count'] . " คืน" ?></td>
+                                    <td class="text-end"><?php echo number_format($r['total'], 2) ?></td>
                                     <td>
                                         <span class="<?php echo get_reservation_paystatus_text($r['pay_status']) ?>">
                                             <?php echo get_reservation_paystatus($r['pay_status']) ?>
                                         </span>
                                     </td>
+                                    <td class="text-center">
+                                        <img src="./assets/images/thumb/<?php echo $r['thumbnail']  ?>" style="height: 3rem;">
+                                    </td>
+                                    <td><?php echo $r['room_name'] . " " . $r['room_type_name'] ?></td>
+
+                                    <td>
+                                        <span class="<?php echo get_reservation_status_text($r['status']) ?>">
+                                            <?php echo get_reservation_status($r['status']) ?>
+                                        </span>
+                                    </td>
+
                                     <td>
                                         <?php if ($r['pay_status'] == 'unpaid') { ?>
                                             <button name="repay" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 btn-secondary">
@@ -128,7 +150,7 @@ $route_params = get_params_isNotEmpty([]);
                                             </button>
                                         <?php   } ?>
 
-                                        <?php if (($r['status'] == 'confirm' || $r['status'] == 'progress') && $r['is_cancel'] != 'true') { ?>
+                                        <?php if (($r['status'] != 'confirm' || $r['status'] == 'progress') && $r['is_cancel'] != 'true') { ?>
                                             <button name="reserv-cancel" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 btn-danger">
                                                 <i class="fa-solid fa-xmark"></i>
                                                 <strong>ยกเลิก</strong>
@@ -136,27 +158,9 @@ $route_params = get_params_isNotEmpty([]);
                                         <?php   } ?>
 
                                     </td>
-                                    <td class="text-center">
-                                        <img src="./assets/images/thumb/<?php echo $r['thumbnail']  ?>" style="height: 3rem;">
-                                    </td>
-                                    <td><?php echo $r['room_name'] . " " . $r['room_type_name'] ?></td>
-                                    <td class="text-end"><?php echo number_format($r['total'], 2) ?></td>
-                                    <td><?php echo date('d/m/Y H:i:s', strtotime($r['create_at'])) ?></td>
-                                    <td>
-                                        <p class="m-0">
-                                            <span class="text-muted">วันที่</span>
-                                            <strong class="text-success">
-                                                <?php echo getShortThaiDate($r['start_dt']) ?>
-                                            </strong>
-                                        </p>
-                                        <p class="m-0">
-                                            <span class="text-muted">ถึง</span>
-                                            <strong class="text-danger">
-                                                <?php echo getShortThaiDate($r['end_dt']) ?>
-                                            </strong>
-                                        </p>
-                                    </td>
-                                    <td class="text-center"><?php echo $r['day_count'] . " คืน" ?></td>
+
+                                    <!-- <td><?php echo date('d/m/Y H:i:s', strtotime($r['create_at'])) ?></td> -->
+
 
                                 </tr>
                             <?php } ?>

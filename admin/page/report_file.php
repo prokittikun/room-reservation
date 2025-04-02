@@ -95,9 +95,9 @@ $route_params = get_params_isNotEmpty([
                             <td><?php echo $r['create_at'] ?></td>
                             <td><?php echo $r['filename'] ?></td>
                             <td>
-                                <a class="btn btn-sm bg-gradient-lightblue" target="_blank" href="../<?php echo $r['storage'] ?>">
+                                <!-- <a class="btn btn-sm bg-gradient-lightblue" target="_blank" href="../<?php echo $r['storage'] ?>">
                                     <i class="fa-solid fa-circle-down"></i>
-                                </a>
+                                </a> -->
                                 <button name="filereport-remove" data-filename="<?php echo $r['filename'] ?>" data-id="<?php echo $r['file_id']  ?>" class="btn btn-sm bg-gradient-lightblue">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>

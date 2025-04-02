@@ -53,7 +53,7 @@ $route_params = get_params_isNotEmpty(['r' => $r,'id'=>$id]);
             <thead>
                 <tr>
                     <th class="text-center" style="width: 3%;" scope="col">ลำดับ</th>
-                    <th style="width: 7%;" scope="col">รหัส</th>
+                    <!-- <th style="width: 7%;" scope="col">รหัส</th> -->
                     <th class="text-center" style="width: 7%;" scope="col">หลักฐาน</th>
                     <th style="width:7%;" scope="col">ยอด</th>
                     <th style="width: 16%;" scope="col"></th>
@@ -73,7 +73,7 @@ $route_params = get_params_isNotEmpty(['r' => $r,'id'=>$id]);
                 ?>
                     <tr>
                         <td class="text-center"><?php echo $idx++ ?></td>
-                        <td><?php echo $r['reservation_id'] ?></td>
+                        <!-- <td><?php echo $r['reservation_id'] ?></td> -->
                         <td class="text-center">
                             <button name="confirm-payslip" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm  bg-gradient-lightblue">
                                 <i class="fa-solid fa-check"></i>
@@ -85,10 +85,10 @@ $route_params = get_params_isNotEmpty(['r' => $r,'id'=>$id]);
                         <td class="text-right"><?php echo number_format($r['total'], 2) ?></td>
                         <td>
                             <?php if ($r['status'] != 'cancel') { ?>
-                                <button name="re-pay" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm  bg-gradient-warning">
+                                <!-- <button name="re-pay" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm  bg-gradient-warning">
                                     <i class="fa-solid fa-xmark"></i>
                                     <strong>ชำระอีกครั้ง</strong>
-                                </button>
+                                </button> -->
                                 <button name="confirm-pay" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm bg-gradient-olive">
                                     <i class="fa-solid fa-check"></i>
                                     <strong>ยืนยัน</strong>
