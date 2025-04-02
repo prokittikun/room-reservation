@@ -43,7 +43,7 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page]);
           <tr>
             <th style="width: 5%;" scope="col">ลำดับ</th>
             <th style="width: 10%;" scope="col">รูปภาพ</th>
-            <!-- <th style="width: 40%;" scope="col">ชื่อห้อง</th> -->
+            <th style="width: 40%;" scope="col">ประเภทห้อง</th>
             <th style="width: 15%;" scope="col">หมายเลขห้อง</th>
             <th class="text-center" style="width: 10%;" scope="col">ราคา</th>
             <th style="width: 20%;" scope="col"></th>
@@ -60,13 +60,17 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page]);
           $idx_start = ($page * $per_page) + 1;
           $idx_end = ($idx_start + $per_page) - 1;
           $idx = $start_row + 1;
-          foreach ($row as $r) { ?>
+          foreach ($row as $r) { 
+            //get room type from room_type table
+            $sql = "SELECT * FROM room_type WHERE room_type_id=?";
+            $room_type = getDataById($sql, [$r['room_type']]);
+            ?>
             <tr>
               <td class="text-center"><?php echo $idx++ ?></td>
               <td>
                 <img src="../assets/images/thumb/<?php echo $r['thumbnail'] ?>" style="width: 2.4rem;" />
               </td>
-              <!-- <td><?php echo $r['room_name'] ?></td> -->
+              <td><?php echo $room_type['room_type_name'] ?></td>
               <td><?php echo $r['room_number'] ?></td>
               <td class="text-center"><?php echo number_format($r['price'], 2) ?></td>
               <td>
