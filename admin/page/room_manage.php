@@ -43,7 +43,7 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page]);
           <tr>
             <th style="width: 5%;" scope="col">ลำดับ</th>
             <th style="width: 10%;" scope="col">รูปภาพ</th>
-            <th style="width: 40%;" scope="col">ชื่อห้อง</th>
+            <!-- <th style="width: 40%;" scope="col">ชื่อห้อง</th> -->
             <th style="width: 15%;" scope="col">หมายเลขห้อง</th>
             <th class="text-center" style="width: 10%;" scope="col">ราคา</th>
             <th style="width: 20%;" scope="col"></th>
@@ -66,7 +66,7 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page]);
               <td>
                 <img src="../assets/images/thumb/<?php echo $r['thumbnail'] ?>" style="width: 2.4rem;" />
               </td>
-              <td><?php echo $r['room_name'] ?></td>
+              <!-- <td><?php echo $r['room_name'] ?></td> -->
               <td><?php echo $r['room_number'] ?></td>
               <td class="text-center"><?php echo number_format($r['price'], 2) ?></td>
               <td>
