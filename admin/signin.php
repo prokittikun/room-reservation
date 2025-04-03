@@ -23,6 +23,11 @@ if (!empty($emp_id)) {
     <script src="../assets/js/errValidate.js"></script>
 
     <style>
+        body {
+            background: url('../assets/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
         @font-face {
             font-family: 'Sarabun';
             src: url('../assets/fonts/Sarabun-Regular.ttf');
