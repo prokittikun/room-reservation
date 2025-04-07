@@ -67,14 +67,15 @@ function get_data_entries($data)
 
     $_datatable = [
         $idx,
-        // $d['reservation_id'],
-        get_reservation_paystatus($d['pay_status']),
-        get_reservation_status($d['status']),
-        number_format($d['total'], 2),
         $room,
-        $d['tel'],
         $name,
-        $date_text
+        $d['tel'],
+        number_format($d['total'], 2),
+        $date_text,
+
+        // $d['reservation_id'],
+        // get_reservation_paystatus($d['pay_status']),
+        // get_reservation_status($d['status']),
     ];
 
     $table = create_table_body($_datatable);
@@ -114,14 +115,15 @@ try {
         $table .= '<thead>';
         $table .= '<tr>';
         $table .= '<th class="text-center" style="width: 3%;" scope="col">ลำดับ</th>';
-        // $table .= '<th style="width:8%;" scope="col">รหัส</th>';
-        $table .= '<th style="width:10%;" scope="col">การจ่ายเงิน</th>';
-        $table .= '<th style="width:10%;" scope="col">สถานะ</th>';
-        $table .= '<th style="width: 8%;" scope="col">ยอด</th>';
         $table .= '<th style="width:21%;" scope="col">ห้อง</th>';
-        $table .= '<th style="width: 9%;" scope="col">เบอร์</th>';
         $table .= '<th style="width: 18%;" scope="col">ชื่อ - นามสกุล</th>';
+        $table .= '<th style="width: 9%;" scope="col">เบอร์</th>';
+        $table .= '<th style="width: 8%;" scope="col">ยอด</th>';
         $table .= '<th style="width: 12%;" scope="col">วันที่จอง</th>';
+
+        // $table .= '<th style="width:8%;" scope="col">รหัส</th>';
+        // $table .= '<th style="width:10%;" scope="col">การจ่ายเงิน</th>';
+        // $table .= '<th style="width:10%;" scope="col">สถานะ</th>';
         $table .= '</tr>';
         $table .= '</thead>';
         $table .= '<tbody>';

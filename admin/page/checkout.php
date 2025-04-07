@@ -31,7 +31,7 @@ $sql .= "ORDER BY create_at LIMIT ?,?";
 array_push($params, $start_row);
 array_push($params, $per_page);
 $row = getDataAll($sql, $params);
-$route_params = get_params_isNotEmpty(['r' => $r,'start_dt'=>$start_dt]);
+$route_params = get_params_isNotEmpty(['r' => $r, 'start_dt' => $start_dt]);
 ?>
 
 <div class="row align-items-center">
@@ -76,10 +76,17 @@ $route_params = get_params_isNotEmpty(['r' => $r,'start_dt'=>$start_dt]);
                             </span>
                         </td>
                         <td>
-                            <button name="reserv-checkout" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-lightblue">
-                                <i class="fa-solid fa-angles-left"></i>
-                                <strong>checkout</strong>
-                            </button>
+                            <?php
+                            $today = date('Y-m-d');
+                            $reservation_end = date('Y-m-d', strtotime($r['end_dt']));
+                            if ($reservation_end == $today) {
+                            ?>
+                                <button name="reserv-checkout" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-lightblue">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                    <strong>checkout</strong>
+                                </button>
+                            <?php } ?>
+
 
                         </td>
                         <td class="text-center">
