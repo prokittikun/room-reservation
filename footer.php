@@ -22,7 +22,7 @@ $row = getDataById($sql, []);
                         <span><?php echo $row['house_no'] ?></span>
                     <?php } ?>
                     <?php if (!empty($row['village_no'] ?? '')) { ?>
-                        <span>/</span>
+                        <span>หมู่ที่</span>
                         <span><?php echo $row['village_no'] ?></span>
                     <?php } ?>
                     <?php if (!empty($row['sub_district'] ?? '')) { ?>

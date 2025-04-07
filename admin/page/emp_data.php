@@ -41,7 +41,7 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'page' => $page,]);
   <div class="col-auto">
     <a class="btn btn-sm bg-gradient-lightblue" href="./?r=emp_form">
       <i class="fa-solid fa-plus"></i>
-      <span>เพิ่มผู้ใช้งาน</span>
+      <span>เพิ่มผู้ดูแล</span>
     </a>
   </div>
 </div>

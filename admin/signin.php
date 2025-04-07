@@ -24,7 +24,7 @@ if (!empty($emp_id)) {
 
     <style>
         body {
-            background: url('../assets/images/background.jpg') no-repeat center center fixed;
+            background: url('../assets/images/bg.png') no-repeat center center fixed;
             background-size: cover;
         }
 

@@ -131,7 +131,7 @@
                     <a class="nav-link">
                         <i class="fa-solid fa-user-gear nav-icon"></i>
                         <p>
-                            พนักงานและผู้ดูแล
+                            ผู้ดูแล
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -140,7 +140,7 @@
                         <li class="nav-item">
                             <a href="?r=emp_data" class="nav-link">
                                 <i class="fa-regular fa-pen-to-square nav-icon"></i>
-                                <p>พนักงานและผู้ดูแล</p>
+                                <p>ผู้ดูแล</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -155,7 +155,7 @@
                         <li class="nav-item">
                             <a href="?r=emp_form" class="nav-link">
                                 <i class="fa-solid fa-plus nav-icon"></i>
-                                <p>เพิ่มพนักงานและผู้ดูแล</p>
+                                <p>เพิ่มผู้ดูแล</p>
                             </a>
                         </li>
 

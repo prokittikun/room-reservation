@@ -18,7 +18,7 @@ if (!empty($id)) {
   <div class="p-2">
     <a class="btn btn-sm bg-gradient-lightblue" href="?r=emp_data">
       <i class="fa-solid fa-plus"></i>
-      <span>ผู้ดูแลและพนักงาน</span>
+      <span>ผู้ดูแล</span>
     </a>
   </div>
 
@@ -27,7 +27,7 @@ if (!empty($id)) {
   <div class="col-md-9">
     <div class="card border shadow-none">
       <div class="card-header bg-light">
-        <h5 class="m-0 card-title">รายละเอียดพนักงานและผู้ดูแล</h5>
+        <h5 class="m-0 card-title">รายละเอียดผู้ดูแล</h5>
       </div>
       <div class="card-body">
         <div class="form-group row">

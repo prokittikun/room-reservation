@@ -65,11 +65,11 @@ $menu = [
         'template' => 'member_data',
     ],
     'emp_data' => [
-        'title' => 'ข้อมูลผู้ใช้งาน และพนักงาน',
+        'title' => 'ข้อมูลผู้ดูแล',
         'template' => 'emp_data',
     ],
     'emp_form' => [
-        'title' => 'ฟอร์มบันทึกข้อมูลผู้ใช้งาน และ พนักงาน',
+        'title' => 'ฟอร์มบันทึกข้อมูลผู้ดูแล',
         'template' => 'emp_form',
     ],
     'user_form' => [

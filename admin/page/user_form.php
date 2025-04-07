@@ -27,7 +27,7 @@ if (!empty($id)) {
   <div class="col-md-9">
     <div class="card border shadow-none">
       <div class="card-header bg-light">
-        <h5 class="m-0 card-title">รายละเอียดพนักงานและผู้ดูแล</h5>
+        <h5 class="m-0 card-title">รายละเอียดสมาชิก</h5>
       </div>
       <div class="card-body">
         <!-- <div class="form-group row">
