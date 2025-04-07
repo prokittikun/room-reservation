@@ -114,10 +114,10 @@ try {
         $table .= '<table class="table">';
         $table .= '<thead>';
         $table .= '<tr>';
-        $table .= '<th class="text-center" style="width: 3%;" scope="col">ลำดับ</th>';
+        $table .= '<th class="text-center" style="width: 10%;" scope="col">ลำดับ</th>';
         $table .= '<th style="width:21%;" scope="col">ห้อง</th>';
         $table .= '<th style="width: 18%;" scope="col">ชื่อ - นามสกุล</th>';
-        $table .= '<th style="width: 9%;" scope="col">เบอร์</th>';
+        $table .= '<th style="width: 10%;" scope="col">เบอร์</th>';
         $table .= '<th style="width: 8%;" scope="col">ยอด</th>';
         $table .= '<th style="width: 12%;" scope="col">วันที่จอง</th>';
 
@@ -153,7 +153,15 @@ try {
         $end_dt_thai = "$dt_thai_end $m_thai_end $y_thai_end";
         $title = "รายงาน";
         $subTitle = "ตั้งแต่วันที่ $start_dt_thai ถึง $end_dt_thai";
+        $pay_status_text = !empty($pay_status) ? "สถานะการชำระเงิน: " . get_reservation_paystatus($pay_status) : "";
+        $status_text = !empty($status) ? "สถานะการจอง: " . get_reservation_status($status) : "";
         $header = "รายงานการจองห้องพัก";
+        if (!empty($pay_status_text)) {
+            $header .= " $pay_status_text";
+        }
+        if (!empty($status_text)) {
+            $header .= " $status_text";
+        }
         $footer = 'รายงาน' . date('วันที่ d-m-Y', strtotime($start_dt));
         $footer .= date(' ถึง วันที่ d-m-Y ', strtotime($end_dt));
         $footer .= date('สร้างเมื่อ Y-m-d');
