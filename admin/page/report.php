@@ -106,7 +106,7 @@ $route_params = get_params_isNotEmpty([
                             </span>
                         </td>
 
-                        <td class="text-right text-muted"><?php echo number_format($r['total'], 2)  ?></td>
+                        <td class="text-start text-muted"><?php echo number_format($r['total'], 2)  ?></td>
                         <td><?php echo $r['room_name'] . " " . $r['room_type_name'] ?></td>
                         <td><?php echo $r['tel'] ?></td>
                         <td><?php echo $r['fname'] . " " . $r['lname'] ?></td>

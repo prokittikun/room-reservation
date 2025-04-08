@@ -200,6 +200,14 @@ try {
                 </a>
             <?php } ?>
         </div>
+        <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <blockquote class="tiktok-embed" cite="YOUR_TIKTOK_URL_HERE" data-video-id="YOUR_VIDEO_ID" style="max-width: 605px; min-width: 325px;">
+                <section></section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    </div>
         <div class="row my-3">
             <?php foreach ($row as $r) { ?>
                 <div class="col-md-2">
@@ -260,5 +268,11 @@ try {
         color: white;
         transform: scale(1.05);
         transition: all 0.3s ease-in-out;
+    }
+    .tiktok-embed {
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
     }
 </style>

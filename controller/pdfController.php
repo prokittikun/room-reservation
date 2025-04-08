@@ -155,13 +155,13 @@ try {
         $subTitle = "ตั้งแต่วันที่ $start_dt_thai ถึง $end_dt_thai";
         $pay_status_text = !empty($pay_status) ? "สถานะการชำระเงิน: " . get_reservation_paystatus($pay_status) : "";
         $status_text = !empty($status) ? "สถานะการจอง: " . get_reservation_status($status) : "";
-        $header = "รายงานการจองห้องพัก";
-        if (!empty($pay_status_text)) {
-            $header .= " $pay_status_text";
-        }
-        if (!empty($status_text)) {
-            $header .= " $status_text";
-        }
+        $header = "
+    <div style='text-align: center; font-size: 16px; font-weight: bold;'>รายงานการจองห้องพัก</div>
+    <div style='text-align: center; font-size: 12px;'>" .
+            (empty($pay_status_text) ? "" : $pay_status_text) . "<br>" .
+            (empty($status_text) ? "" : $status_text) . "
+    </div>
+";
         $footer = 'รายงาน' . date('วันที่ d-m-Y', strtotime($start_dt));
         $footer .= date(' ถึง วันที่ d-m-Y ', strtotime($end_dt));
         $footer .= date('สร้างเมื่อ Y-m-d');
@@ -181,14 +181,14 @@ try {
         $mpdf->defaultfooterfontsize = 10;
         $mpdf->defaultfooterfontstyle = 'B';
         $mpdf->defaultfooterline = 0;
-
-        $mpdf->SetHeader($header);
+        // $mpdf->SetHTMLHeader($header);
         $mpdf->SetFooter($footer);
         $mpdf->SetTitle($title);
         $mpdf->SetSubject($subTitle);
         $mpdf->WriteHTML($stylesheet, \Mpdf\HTMLParserMode::HEADER_CSS);
         $mpdf->WriteHTML($mpdf_style, \Mpdf\HTMLParserMode::HEADER_CSS);
-        $mpdf->WriteHTML($table);
+        // $mpdf->WriteHTML($header);
+        $mpdf->WriteHTML($header . "" .$table);
         $report_created = date_stamp_id();
         $start = str_replace('-', '', $start_dt);
         $end = str_replace('-', '', $end_dt);
