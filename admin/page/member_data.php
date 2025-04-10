@@ -97,3 +97,30 @@ echo create_pagination($page, $page_all, $_p[0], $row_count, $idx_start, $_p[1])
 ?>
 
 <script src="./assets/js/user_data.js"></script>
+<script >
+  $('button[name="emp-remove"]').click(function () {
+    const id = $(this).attr('data-id');
+    confirmDialog('ลบข้อมูลสมาชิก', "ต้องการข้อมูลรายการนี้ใช่หรือไม่ ?")
+        .then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    'url': employeeRoute(),
+                    type: 'post',
+                    data: {
+                        'id': id,
+                        'route': '/member/soft_delete'
+                    },
+                    complete: function (xhr, textStatus) {
+
+                        if (xhr.status == 200) {
+                            success('ลบข้อมูลเรียบร้อย')
+                        } else {
+                            errDialog('แจ้งเตือน', '', data.err)
+                        }
+
+                    }
+                })
+            }
+        })
+})
+</script>

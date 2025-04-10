@@ -89,6 +89,19 @@ switch ($route) {
         }
 
         break;
+    case '/member/soft_delete':
+        $sql = "UPDATE member SET soft_delete =?,";
+        $sql .= "update_at = ? WHERE member_id=?";
+        $params = ['true', $update_at, $id];
+        try {
+            $stmt = connect_db()->prepare($sql);
+            $stmt->execute($params);
+        } catch (PDOException $e) {
+            echo json_encode(['err' => $e->getMessage()]);
+            http_response_code(500);
+        }
+
+        break;
     default:
         break;
 }
